@@ -53,9 +53,11 @@ class CommentBox extends Component {
   render() {
     return (
       <div className="commentBox">
-        <h1 className="title">匿名树洞</h1>
-        <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)} />
-        <CommentList data={this.state.data}/>
+        <h1 className="title W_swficon">有什么新鲜事想告诉大家</h1>
+        <div className="bg">
+          <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)} />
+          <CommentList data={this.state.data}/>
+        </div>
       </div>
     )
   }
