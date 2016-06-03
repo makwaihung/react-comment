@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-let defaultImage = require('../images/default.jpg');
+let defaultImage = require('../../images/default.jpg');
 
 class Comment extends Component {
   render (){

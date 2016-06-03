@@ -6,7 +6,6 @@ import CommentForm from './CommentForm';
 import Wilddog from 'wilddog';
 import { mixin } from 'core-decorators';
 import WildReactMixin from 'wildreact';
-require('normalize.css/normalize.css');
 require('styles/comment.scss');
 
 

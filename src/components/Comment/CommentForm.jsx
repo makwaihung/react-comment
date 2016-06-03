@@ -25,7 +25,7 @@ class CommentForm extends Component {
       alert('亲！请填完整资料！');
     }else {
       console.log(name, text);
-      let date  = moment().format('YYYY-MM-DD, h:mm:ss');
+      let date  = moment().format('YYYY-MM-DD, HH:mm:ss');
       let cid = Math.round(new Date().getTime()/1000)
       this.props.onCommentSubmit({cid: cid,  name, text, date: date });
       //清空
