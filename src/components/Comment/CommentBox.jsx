@@ -15,14 +15,34 @@ class CommentBox extends Component {
   constructor(props){
     super(props);
     this.state = { data: [] };
+
+    let role = this.getRole();
+
+    console.log(role)
   }
 
+  getRole(){
+    let { query } = this.props.location
+    if(query && query.role){
+       if(query.role == 'male'){
+         return 'male'
+       } else if(query.role == 'female'){
+         return 'female'
+       }else{
+         return 'default'
+       }
+    }else{
+      return 'default'
+    }
+  }
 
   postCommentData(comment){
+    let role = this.getRole();
     let ref = new Wilddog('https://reactchat.wilddogio.com/');
     let postsRef = ref.child('data');
     postsRef.push({
       cid: comment.cid,
+      role: role,
       name: comment.name,
       text:comment.text,
       date:comment.date

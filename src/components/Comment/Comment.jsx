@@ -2,14 +2,15 @@
 
 import React, { Component } from 'react';
 
-let defaultImage = require('../../images/default.jpg');
-
 class Comment extends Component {
   render (){
+    let role = this.props.role === undefined ? 'default': this.props.role;
+    let roleHeadSrc = require('images/'+ role +'.jpg');
+
     return (
       <div className="comment-item clearfix">
         <div className="comment-avatar fl">
-            <img src={ defaultImage }/>
+            <img src={ roleHeadSrc }/>
         </div>
         <div className="content">
             <div className="comment-name">{ this.props.name }</div>

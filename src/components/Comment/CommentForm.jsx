@@ -40,8 +40,6 @@ class CommentForm extends Component {
   }
 
   handleChange(e){
-
-
     if (e.target.value.length == 0){
       this.setState({
         wordNum: 140,

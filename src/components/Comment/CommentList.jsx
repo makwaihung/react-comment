@@ -13,7 +13,7 @@ class CommentList extends  Component {
       }else{
         comment.name = comment.name[0]+'*'+comment.name[comment.name.length-1]
       }
-      commentNodes.push( <Comment key = {index} name = {comment.name} date = {comment.date} text = {comment.text} /> );
+      commentNodes.push( <Comment key = {index} {...comment} /> );
     });
 
     return (
