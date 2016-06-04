@@ -15,24 +15,40 @@ class CommentBox extends Component {
   constructor(props){
     super(props);
     this.state = { data: [] };
+    this.setRole();
+  }
 
-    let role = this.getRole();
-
-    console.log(role)
+  setRole(){
+    let role = this.getUrlParmRole();
+    localStorage.role = role;
   }
 
   getRole(){
-    let { query } = this.props.location
+    if(localStorage.role){
+      return localStorage.role;
+    }else{
+      return 'default';
+    }
+  }
+
+
+  getUrlParmRole(){
+    let { query } = this.props.location;
     if(query && query.role){
+      delete localStorage.role;
        if(query.role == 'male'){
-         return 'male'
+         return 'male';
        } else if(query.role == 'female'){
-         return 'female'
+         return 'female';
        }else{
-         return 'default'
+         return 'default';
        }
     }else{
-      return 'default'
+      if(localStorage.role){
+        return localStorage.role;
+      }else{
+        return 'default';
+      }
     }
   }
 
@@ -62,11 +78,6 @@ class CommentBox extends Component {
   handleCommentSubmit(comment){
     console.log(comment);
     this.postCommentData(comment)
-    // let commentData = this.state.data;
-    // let newCommentData = commentData.concat(comment);
-    // this.setState({
-    //   data: newCommentData
-    // })
   }
 
   render() {

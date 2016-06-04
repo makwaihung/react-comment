@@ -52,7 +52,7 @@ $bodyBg: #0d3b6c;
 .fr{
   float: right;
 }
-
+::-webkit-scrollbar{width: 0; height: 0; display: none;}
 
 html,body{
   width: 100%;
@@ -78,6 +78,7 @@ body {
   max-width: 600px;
   min-width: 320px;
   margin: 0 auto;
+  padding-top: 60px;
 }
 
 .comment-item {

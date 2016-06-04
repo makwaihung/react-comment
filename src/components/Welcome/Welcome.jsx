@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 require('styles/welcome.scss');
-import NavLink from '../NavLink/NavLink';
+import { NavLink } from '../index';
 
 let logo = require('images/logo.jpg');
 
@@ -41,7 +41,11 @@ export default class Welcome extends Component {
                 </ul>
             </div>
           </div>
+          <div className="about-link">
+              <NavLink to = '/about'>关于</NavLink>
+          </div>
       </div>
+
     )
   }
 }

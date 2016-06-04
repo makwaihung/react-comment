@@ -12,6 +12,7 @@
  - React.js
  - 野狗(wilddogio)作为后端
  - scss
+ - react-router
 
 ## 用法
 ``` bash
@@ -39,15 +40,13 @@ npm run copy
 ```
 
 ## 展示
-![react comment](src/images/demo.png)
+欢迎页面：
+![欢迎页面](src/images/demo_01.png)
+
+吐槽页面：
+![吐槽页面](src/images/demo_02.png)
 
 ## 规划
- - 添加propTypes进行接口限制
- - 增加新功能（eg.角色、性别、头像选择，数据分页处理，滚动加载等等。）
- - 引入 react-router进行实战练习
+ - 增加新功能（eg.~~角色、性别、~~数据分页处理，滚动加载等等。）
+ - ~~引入 react-router进行实战练习~~
  -  ...
-
-
-
-
-  [1]: propTypes

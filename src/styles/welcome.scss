@@ -111,6 +111,9 @@
 
         }
 
+
+
+
         @at-root{
           .sex-text{
             color: #fff;
@@ -120,5 +123,16 @@
           }
         }
       }
+  }
+
+  .about-link {
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    width: 100%;
+    a{
+      color: #56FF00;
+      text-shadow: 3px 2px 5px #31353F;
+    }
   }
 }

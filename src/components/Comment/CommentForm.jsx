@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import moment from 'moment';
-
 class CommentForm extends Component {
 
   constructor(props){
@@ -18,8 +17,8 @@ class CommentForm extends Component {
     e.preventDefault();
     console.log('提交表单....');
 
-    let name = this.refs.name.value;
-    let text = this.refs.text.value;
+    let name = this.refs.name.value.trim();
+    let text = this.refs.text.value.trim();
 
     if( name =='' || text == ''){
       alert('亲！请填完整资料！');
@@ -27,9 +26,10 @@ class CommentForm extends Component {
       console.log(name, text);
       let date  = moment().format('YYYY-MM-DD, HH:mm:ss');
       let cid = Math.round(new Date().getTime()/1000)
-      this.props.onCommentSubmit({cid: cid,  name, text, date: date });
+      this.props.onCommentSubmit({cid: cid, name: name, text: text, date: date });
       //清空
-      this.refs.name.value = '';
+      // this.refs.name.value = '';
+      localStorage.name = name;
       this.refs.text.value = '';
       this.setState({
         wordNum: 140,
@@ -66,7 +66,7 @@ class CommentForm extends Component {
       <div className="comment-form">
          <form onSubmit = { this.handleSubmit.bind(this) } >
             <div className="field">
-                <input type="text" placeholder="请输入您的姓名..." className="input" ref="name"/>
+                <input type="text" placeholder="请输入您的姓名..." className="input" ref="name" maxLength={ 10 } defaultValue={localStorage.name? localStorage.name :''}/>
             </div>
             <div className="field">
                 <textarea  placeholder="该评论点什么..." className="textarea" ref="text" onChange = { this.handleChange.bind(this) }></textarea>
