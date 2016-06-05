@@ -19,9 +19,9 @@
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false"
   },
-  "repository": "",
+  "repository": "https://github.com/makwaihung",
   "keywords": [],
-  "author": "Your name here",
+  "author": "makwaihung",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.0.0",
