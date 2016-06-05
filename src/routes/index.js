@@ -4,10 +4,10 @@ import {Welcome, Comment, About } from '../components';
 import App from '../App';
 
 export default (
-  <Route path = "/" component = { App }>
+  <Route path = "/react-comment" component = { App }>
     <IndexRoute component = { Welcome } />
-    <Route path = "comment" component = { Comment } />
-    <Route path = "about" component = { About } />
-    <Redirect from="*" to = "/" />
+    <Route path = "/react-comment/comment" component = { Comment } />
+    <Route path = "/react-comment/about" component = { About } />
+    <Redirect from="*" to = "/react-comment" />
   </Route>
 )

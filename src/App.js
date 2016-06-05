@@ -9,8 +9,8 @@ export default class App extends Component {
     let modalData = { text: '您所输入的姓名会进行匿名处理, 还有不要忘记如果换性别角色，需要在首页重选喔！',confirmText: '朕明白', destroyed: false };
     return (
       <div>
-        { pathname === '/' ? '' : <NavBar /> }
-        { pathname === '/comment' ? <Modal {...modalData} /> : ''}
+        { pathname === '/react-comment' ? '' : <NavBar /> }
+        { pathname === '/react-comment/comment' ? <Modal {...modalData} /> : ''}
         <ReactCSSTransitionGroup
           component="div"
           transitionName="animate"

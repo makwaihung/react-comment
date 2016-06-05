@@ -20,20 +20,20 @@ export default class Welcome extends Component {
             <div className="role">
                 <ul>
                   <li>
-                      <NavLink to = {{ pathname: '/comment', query: { role: 'male' } }} >
+                      <NavLink to = {{ pathname: '/react-comment/comment', query: { role: 'male' } }} >
                         <img src = { this.props.roleHeadImg.male}/>
                         <div className="sex-text">男生</div>
                       </NavLink>
                   </li>
                   <li>
-                    <NavLink to = {{ pathname: '/comment', query: { role: 'default' } }} >
+                    <NavLink to = {{ pathname: '/react-comment/comment', query: { role: 'default' } }} >
                         <img src = { this.props.roleHeadImg.default}/>
                         <div className="sex-text">默认</div>
                     </NavLink>
 
                   </li>
                   <li>
-                    <NavLink to = {{ pathname: '/comment', query: { role: 'female' } }} >
+                    <NavLink to = {{ pathname: '/react-comment/comment', query: { role: 'female' } }} >
                       <img src = { this.props.roleHeadImg.female} />
                       <div className="sex-text">女生</div>
                     </NavLink>
@@ -42,7 +42,7 @@ export default class Welcome extends Component {
             </div>
           </div>
           <div className="about-link">
-              <NavLink to = '/about'>关于</NavLink>
+              <NavLink to = '/react-comment/about'>关于</NavLink>
           </div>
       </div>
 
