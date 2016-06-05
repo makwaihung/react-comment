@@ -40,6 +40,8 @@ npm run copy
 ```
 
 ## 展示
+[点击我查看在线展示](http://makwaihung.github.io/react-comment)
+
 欢迎页面：
 ![欢迎页面](src/images/demo_01.png)
 
