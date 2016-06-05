@@ -5,8 +5,17 @@ export default class Modal extends Component {
   constructor(props){
     super(props)
     this.state = {
-      destroyed: localStorage.closeModal? true : this.props.destroyed
+      destroyed: localStorage.closeModal? true : this.props.destroyed,
+      className :'modal pop-scale'
     }
+  }
+
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({
+        className: 'modal pop-scale pop-normal'
+      })
+    }, 500);
   }
 
   destroy(){
@@ -22,7 +31,7 @@ export default class Modal extends Component {
     }
 
     return(
-      <div className="modal" ref="modal">
+      <div className={this.state.className} ref="modal" >
         <div className="modal-inner">
             <div className="modal-text">{ this.props.text }</div>
             <button className="modal-submitBtn" onClick={ this.destroy.bind(this) }>{ this.props.confirmText }</button>

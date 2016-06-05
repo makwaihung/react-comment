@@ -15,7 +15,7 @@ class CommentForm extends Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log('提交表单....');
+    // console.log('提交表单....');
 
     let name = this.refs.name.value.trim();
     let text = this.refs.text.value.trim();
@@ -23,7 +23,7 @@ class CommentForm extends Component {
     if( name =='' || text == ''){
       alert('亲！请填完整资料！');
     }else {
-      console.log(name, text);
+      // console.log(name, text);
       let date  = moment().format('YYYY-MM-DD, HH:mm:ss');
       let cid = Math.round(new Date().getTime()/1000)
       this.props.onCommentSubmit({cid: cid, name: name, text: text, date: date });

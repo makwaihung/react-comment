@@ -67,7 +67,7 @@ class CommentBox extends Component {
 
   componentDidMount() {
     let ref = new Wilddog('https://reactchat.wilddogio.com/data');
-    console.log(ref)
+    // console.log(ref)
     this.bindAsArray(ref, 'data');
   }
 
@@ -76,7 +76,7 @@ class CommentBox extends Component {
   }
 
   handleCommentSubmit(comment){
-    console.log(comment);
+    // console.log(comment);
     this.postCommentData(comment)
   }
 

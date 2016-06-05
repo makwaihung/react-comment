@@ -1,3 +1,19 @@
+.pop-scale{
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0) scale(1.185);
+  transform: translate3d(0, 0, 0) scale(1.185);
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+}
+.pop-normal {
+  opacity: 1;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/********************************************/
 .animate-enter {
   opacity: 0.01;
   transition: opacity .5s ease-in;
@@ -15,7 +31,7 @@
 .animate-leave.animate-leave-active {
   opacity: 0;
 }
-
+/*******************************************/
 
 @-moz-keyframes like-wind {
     0% {
